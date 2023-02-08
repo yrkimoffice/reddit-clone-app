@@ -3,7 +3,6 @@ import InputGroup from "../../components/InputGroup";
 import axios from "axios";
 import {useRouter} from "next/router";
 import {GetServerSideProps} from "next";
-import Axios from "axios";
 
 const SubCreate = () => {
     const [name, setName] = useState("");
@@ -54,7 +53,7 @@ const SubCreate = () => {
                             placeholder="제목"
                             value={title}
                             setValue={setTitle}
-                            error={errors.error}
+                            error={errors.title}
                         />
                     </div>
                     <div className="my-6">

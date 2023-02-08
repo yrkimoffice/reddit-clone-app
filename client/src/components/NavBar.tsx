@@ -18,8 +18,8 @@ const NavBar: React.FC = () => {
     }
 
     return (
-        <div className="fixed inset-x-0 top-0 z-10 flex items-center justify-between h-16 px-5 bg-white">
-            <span className="text-2xl font-semibold text-gray-400">
+        <div className="fixed inset-x-0 top-0 z-10 flex items-center justify-between h-16 px-5 bg-white h-13">
+            <span className="text-2xl text-semibold text-gray-400">
                 <Link href="/">Community</Link>
             </span>
             <div className="max-w-full px-4">
@@ -35,18 +35,19 @@ const NavBar: React.FC = () => {
                 {!loading &&
                     (authenticated ? (
                         <button
-                            className="w-20 p-2 mr-2 text-center text-white bg-gray-400 rounded"
+                            className="w-20 px-2 mr-2 text-sm text-center text-white bg-gray-400 rounded h-7"
                             onClick={handleLogout}>
                             로그아웃
                         </button>
                     ) : (
                         <>
-                            <Link className="w-20 p-2 mr-2 text-center text-blue-500 border-blue-500 rounded"
-                                  href={'/login'}>
+                            <Link
+                                className="w-20 px-2 pt-1 mr-2 text-sm text-center text-blue-500 border border-blue-500 rounded h-7"
+                                href={'/login'}>
                                 로그인
                             </Link>
-                            <Link
-                                className="w-20 p-2 text-center text-white bg-gray-400 rounded" href="/register">
+                            <Link className="w-20 px-2 pt-1 text-sm text-center text-white bg-gray-400 rounded h-7"
+                                  href="/register">
                                 회원가입
                             </Link>
                         </>

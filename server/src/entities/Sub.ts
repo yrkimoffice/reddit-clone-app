@@ -23,6 +23,9 @@ export default class Sub extends BaseEntity {
     @Column({nullable: true})
     bannerUrn: string;
 
+    @Column()
+    username: string;
+
     @ManyToOne(() => User)
     @JoinColumn({name: "username", referencedColumnName: "username"})
     User: User;
