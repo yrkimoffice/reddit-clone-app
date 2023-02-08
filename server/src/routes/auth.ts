@@ -88,7 +88,7 @@ const login = async (req: Request, res: Response) => {
         }
 
         // 비밀번호 맞으면 토큰 생성
-        const token = jwt.sign({username}, process.env.JWT_TOKEN)
+        const token = jwt.sign({username}, process.env.JWT_SECRET)
 
         // 쿠키 저장
         res.set("Set-Cookie", cookie.serialize("token", token, {
