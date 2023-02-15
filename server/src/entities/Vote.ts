@@ -4,7 +4,7 @@ import User from "./User";
 import Post from "./Post";
 import Comment from "./Comment";
 
-@Entity("subs")
+@Entity("vote")
 export default class Vote extends BaseEntity {
     @Column()
     value: number;
